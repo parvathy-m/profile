@@ -3,30 +3,8 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Folder } from 'lucide-react';
 import { Github } from './BrandIcons';
 
-const Projects = () => {
-  const projectsData = [
-    {
-      title: 'Zenith Analytics Dashboard',
-      description: 'A real-time SaaS analytics dashboard monitoring millions of data points daily. Features multi-tenant structures, custom reports generator, and lightning-fast charting layouts.',
-      tags: ['React', 'Next.js', 'TailwindCSS', 'Node.js', 'TimescaleDB'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-    {
-      title: 'CloudDeploy Orchestrator',
-      description: 'A DevOps automated engine designed to spin up, configure, and scale containerized clusters on AWS. Integrates with custom webhook triggers and runs async task runners.',
-      tags: ['Spring Boot', 'Docker', 'Redis', 'AWS SDK', 'Java'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-    {
-      title: 'CryptoPulse Alert System',
-      description: 'A cryptocurrency price aggregator checking market prices across public exchanges. Offers low-latency WebSockets updates, transactional notifications, and user dashboards.',
-      tags: ['React', 'Express.js', 'PostgreSQL', 'Socket.io', 'Node.js'],
-      github: 'https://github.com',
-      demo: 'https://example.com',
-    },
-  ];
+const Projects = ({ projects }) => {
+  if (!projects) return null;
 
   return (
     <section id="projects" className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
@@ -45,13 +23,13 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, idx) => (
+          {projects.map((project, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
               whileHover={{ y: -8 }}
               className="group flex flex-col justify-between p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 hover:shadow-xl dark:hover:shadow-primary-500/5 transition-all duration-300"
             >
@@ -87,7 +65,7 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary-500 dark:group-hover:text-primary-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="mt-3 text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                <p className="mt-3 text-sm text-slate-500 dark:text-slate-450 leading-relaxed">
                   {project.description}
                 </p>
               </div>
@@ -98,7 +76,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-semibold px-2.5 py-1 rounded-md bg-white border border-slate-200/50 dark:bg-slate-800 dark:border-slate-700 text-slate-600 dark:text-slate-350"
+                      className="text-xs font-semibold px-2.5 py-1 rounded-md bg-white border border-slate-200/50 dark:bg-slate-800 dark:border-slate-700 text-slate-655 dark:text-slate-350"
                     >
                       {tag}
                     </span>

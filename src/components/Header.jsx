@@ -5,9 +5,11 @@ import { Github, Linkedin } from './BrandIcons';
 import { useTheme } from '../context/ThemeContext';
 import avatarImg from '../assets/avatar.png';
 
-const Header = () => {
+const Header = ({ profile }) => {
   const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  if (!profile) return null;
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -31,7 +33,7 @@ const Header = () => {
               className="flex-shrink-0"
             >
               <a href="#" className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary-600 to-indigo-500 bg-clip-text text-transparent dark:from-primary-400 dark:to-indigo-400">
-                AlexRivera.dev
+                {profile.name.replace(/\s+/g, '')}.dev
               </a>
             </motion.div>
 
@@ -131,15 +133,15 @@ const Header = () => {
               </span>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                Hi, I'm <span className="bg-gradient-to-r from-primary-600 to-indigo-500 bg-clip-text text-transparent dark:from-primary-400 dark:to-indigo-400">Alex Rivera</span>
+                Hi, I'm <span className="bg-gradient-to-r from-primary-600 to-indigo-500 bg-clip-text text-transparent dark:from-primary-400 dark:to-indigo-400">{profile.name}</span>
               </h1>
               
               <p className="mt-3 text-xl sm:text-2xl font-medium text-slate-600 dark:text-slate-300">
-                Senior Full Stack Engineer
+                {profile.title}
               </p>
               
-              <p className="mt-4 text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto lg:mx-0">
-                Crafting robust web architectures and seamless digital experiences using React, Node.js, and cloud ecosystems. Passionate about performance, clean code, and user-centric design.
+              <p className="mt-4 text-base sm:text-lg text-slate-550 dark:text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                {profile.summary}
               </p>
 
               {/* Social and CTAs */}
@@ -161,7 +163,7 @@ const Header = () => {
               {/* Social Icon Row */}
               <div className="mt-8 flex justify-center lg:justify-start space-x-5 text-slate-400">
                 <a 
-                  href="https://github.com" 
+                  href={profile.github} 
                   target="_blank" 
                   rel="noreferrer" 
                   className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -170,7 +172,7 @@ const Header = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href={profile.linkedin} 
                   target="_blank" 
                   rel="noreferrer" 
                   className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
@@ -179,7 +181,7 @@ const Header = () => {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a 
-                  href="mailto:alex.rivera@example.com" 
+                  href={`mailto:${profile.email}`} 
                   className="hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                   aria-label="Email Address"
                 >
@@ -204,7 +206,7 @@ const Header = () => {
                 <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-white dark:border-slate-900 bg-slate-100">
                   <img
                     src={avatarImg}
-                    alt="Alex Rivera Portrait"
+                    alt={`${profile.name} Portrait`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

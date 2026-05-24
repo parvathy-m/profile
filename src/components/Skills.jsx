@@ -1,60 +1,45 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, Server, Database, Cloud, Star } from 'lucide-react';
+import { Code, Server, Database, Cloud, Star, Award } from 'lucide-react';
 
-const Skills = () => {
+const Skills = ({ skills }) => {
   const [activeTab, setActiveTab] = useState('All');
 
-  const categories = ['All', 'Frontend', 'Backend', 'Database', 'DevOps'];
+  if (!skills) return null;
 
-  const skillsData = [
-    // Frontend
-    { name: 'React', level: 95, category: 'Frontend', icon: '⚛️' },
-    { name: 'Next.js', level: 90, category: 'Frontend', icon: '▲' },
-    { name: 'TypeScript', level: 88, category: 'Frontend', icon: '📘' },
-    { name: 'TailwindCSS', level: 95, category: 'Frontend', icon: '🎨' },
-    { name: 'HTML5/CSS3', level: 95, category: 'Frontend', icon: '🌐' },
-    // Backend
-    { name: 'Node.js', level: 92, category: 'Backend', icon: '🟢' },
-    { name: 'Spring Boot', level: 85, category: 'Backend', icon: '🍃' },
-    { name: 'Express', level: 90, category: 'Backend', icon: '⚡' },
-    { name: 'Python/FastAPI', level: 80, category: 'Backend', icon: '🐍' },
-    // Database
-    { name: 'PostgreSQL', level: 88, category: 'Database', icon: '🐘' },
-    { name: 'MongoDB', level: 85, category: 'Database', icon: '🍃' },
-    { name: 'Redis', level: 80, category: 'Database', icon: '🔴' },
-    { name: 'SQL/MySQL', level: 90, category: 'Database', icon: '💾' },
-    // DevOps
-    { name: 'Docker', level: 85, category: 'DevOps', icon: '🐳' },
-    { name: 'AWS Cloud', level: 82, category: 'DevOps', icon: '☁️' },
-    { name: 'GitHub Actions', level: 88, category: 'DevOps', icon: '🤖' },
-    { name: 'Linux/Bash', level: 80, category: 'DevOps', icon: '🐧' },
-  ];
+  // Extract categories dynamically
+  const categories = ['All', ...new Set(skills.map(s => s.category))];
 
-  const categoryIcons = {
-    Frontend: <Code className="w-4 h-4" />,
-    Backend: <Server className="w-4 h-4" />,
-    Database: <Database className="w-4 h-4" />,
-    DevOps: <Cloud className="w-4 h-4" />,
+  const getCategoryIcon = (cat) => {
+    const icons = {
+      Languages: <Code className="w-4 h-4" />,
+      Backend: <Server className="w-4 h-4" />,
+      Testing: <Award className="w-4 h-4" />,
+      Databases: <Database className="w-4 h-4" />,
+      DevOps: <Cloud className="w-4 h-4" />,
+      Architecture: <Server className="w-4 h-4" />,
+      Methodologies: <Star className="w-4 h-4" />,
+    };
+    return icons[cat] || <Code className="w-4 h-4" />;
   };
 
   const filteredSkills = activeTab === 'All' 
-    ? skillsData 
-    : skillsData.filter(s => s.category === activeTab);
+    ? skills 
+    : skills.filter(s => s.category === activeTab);
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.05
+        staggerChildren: 0.04
       }
     }
   };
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.25 } }
   };
 
   return (
@@ -68,7 +53,7 @@ const Skills = () => {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-primary-600 to-indigo-500 mx-auto mt-3 rounded-full"></div>
           <p className="mt-4 text-slate-500 dark:text-slate-400 text-lg">
-            A comprehensive list of core technologies, frameworks, and tools I use to bring products to life.
+            A comprehensive list of core technologies, frameworks, and tools I use to build robust services.
           </p>
         </div>
 
@@ -78,13 +63,13 @@ const Skills = () => {
             <button
               key={cat}
               onClick={() => setActiveTab(cat)}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
                 activeTab === cat
                   ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-950 shadow-md scale-105'
                   : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800 dark:hover:border-slate-700'
               }`}
             >
-              {categoryIcons[cat]}
+              {getCategoryIcon(cat)}
               {cat}
             </button>
           ))}

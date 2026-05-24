@@ -5,7 +5,7 @@ import { Github, Linkedin } from './BrandIcons';
 import Spinner from './Spinner';
 import Toast from './Toast';
 
-const Contact = () => {
+const Contact = ({ profile }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,6 +19,8 @@ const Contact = () => {
     message: '',
     type: 'success',
   });
+
+  if (!profile) return null;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -91,7 +93,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">
                 Let's discuss something great
               </h3>
-              <p className="mt-3 text-slate-550 dark:text-slate-400 leading-relaxed">
+              <p className="mt-3 text-slate-550 dark:text-slate-450 leading-relaxed text-left">
                 I am always open to discussing new software development initiatives, consulting opportunities, or collaborating on innovative products.
               </p>
             </div>
@@ -102,10 +104,10 @@ const Contact = () => {
                 <div className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl text-primary-500 border border-slate-100 dark:border-slate-850">
                   <Mail className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Email Me</p>
-                  <a href="mailto:alex.rivera@example.com" className="text-slate-700 dark:text-slate-200 hover:text-primary-500 transition-colors font-medium">
-                    alex.rivera@example.com
+                  <a href={`mailto:${profile.email}`} className="text-slate-750 dark:text-slate-200 hover:text-primary-500 transition-colors font-medium">
+                    {profile.email}
                   </a>
                 </div>
               </div>
@@ -114,10 +116,10 @@ const Contact = () => {
                 <div className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl text-indigo-500 border border-slate-100 dark:border-slate-850">
                   <Phone className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Call Me</p>
-                  <a href="tel:+15550192834" className="text-slate-700 dark:text-slate-200 hover:text-indigo-500 transition-colors font-medium">
-                    +1 (555) 019-2834
+                  <a href={`tel:${profile.phone.replace(/\s+/g, '')}`} className="text-slate-750 dark:text-slate-200 hover:text-indigo-500 transition-colors font-medium">
+                    {profile.phone}
                   </a>
                 </div>
               </div>
@@ -126,21 +128,21 @@ const Contact = () => {
                 <div className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl text-primary-500 border border-slate-100 dark:border-slate-850">
                   <MapPin className="w-6 h-6" />
                 </div>
-                <div>
+                <div className="text-left">
                   <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Location</p>
-                  <p className="text-slate-700 dark:text-slate-200 font-medium">
-                    San Francisco, California, USA
+                  <p className="text-slate-750 dark:text-slate-200 font-medium">
+                    {profile.location}
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Socials Connection */}
-            <div>
+            <div className="text-left">
               <p className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Follow My Work</p>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com"
+                  href={profile.github}
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl text-slate-500 hover:text-primary-500 hover:border-primary-500/30 border border-slate-100 dark:border-slate-800 transition-all hover:scale-105"
@@ -149,7 +151,7 @@ const Contact = () => {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href={profile.linkedin}
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 bg-slate-50 dark:bg-slate-900 rounded-xl text-slate-500 hover:text-indigo-500 hover:border-indigo-500/30 border border-slate-100 dark:border-slate-800 transition-all hover:scale-105"
@@ -236,7 +238,7 @@ const Contact = () => {
                   onChange={handleChange}
                   disabled={loading}
                   rows="5"
-                  placeholder="Hi Alex, I'd love to chat about..."
+                  placeholder="Hi Parvathy, I'd love to chat about..."
                   className="px-4 py-3 rounded-xl border border-slate-200/80 bg-white dark:bg-slate-900 dark:border-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none disabled:opacity-50"
                   required
                 ></textarea>
@@ -249,7 +251,7 @@ const Contact = () => {
                 className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-slate-950 dark:hover:bg-slate-50 font-semibold rounded-xl transition-all shadow-md cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed hover:shadow-lg"
               >
                 {loading ? (
-                  <Spinner size="sm" color={window.document.documentElement.classList.contains('dark') ? 'primary' : 'white'} />
+                  <Spinner size="sm" color="white" />
                 ) : (
                   <>
                     <Send className="w-4 h-4" />

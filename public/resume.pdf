@@ -1,30 +1,33 @@
 =========================================
-ALEX RIVERA - SENIOR SOFTWARE ENGINEER
-Email: alex.rivera@example.com | Tel: +1 (555) 019-2834
-LinkedIn: linkedin.com/in/alexrivera | GitHub: github.com/alexrivera
+PARVATHY MOHAN - BACKEND SOFTWARE ENGINEER
+Email: parvathymohan016@gmail.com | Tel: +91 7025871892
+LinkedIn: linkedin.com/in/parvathy-Mohan | GitHub: parvathy-m.github.io
+Location: India
 =========================================
 
 PROFESSIONAL SUMMARY
-Dynamic and result-oriented Senior Software Engineer with 8+ years of hands-on experience in designing, building, and deploying highly scalable web solutions, distributed architectures, and microservices. Expert in Javascript (React, Next.js, Node.js) and Java (Spring Boot) ecosystems.
+Backend Software Engineer with 4+ years of experience in backend development using Java, Spring Boot, and Microservices architecture. Skilled in designing scalable REST APIs, implementing secure authentication (JWT/OAuth2), and optimizing database performance. Experienced in Agile environments with strong focus on clean code, unit testing, and production stability.
 
 TECHNICAL SKILLS
-- Frontend: React, Next.js, HTML5, CSS3, TailwindCSS, TypeScript
-- Backend: Node.js (Express), Java (Spring Boot), Python (FastAPI)
-- Databases: PostgreSQL, MongoDB, Redis, MySQL
-- DevOps & Cloud: AWS (S3, EC2, ECS, Lambda), Docker, CI/CD, Git, Linux
+- Languages: Java, SQL
+- Backend: Spring Boot, Spring Security, JPA, Hibernate, REST APIs, JWT
+- Testing: JUnit 5, Mockito, Postman
+- Databases: MySQL, PostgreSQL, MongoDB, MS SQL
+- DevOps: Git, GitHub, GitLab, Maven, Gradle, Jenkins
+- Architecture: Microservices, Monolithic
+- Methodologies: Agile (Scrum), JIRA
 
-EXPERIENCE
-Senior Software Engineer | TechCorp Inc. (2022 - Present)
-- Architected and built a microservices-based SaaS e-commerce checkout page resulting in a 25% improvement in load times and a 14% conversion bump.
-- Led a team of 4 developer peers to rewrite a legacy Java backend into modern Spring Boot modules.
-- Formulated custom GitHub Action CI/CD pipelines, automating tests and containerized Docker deployments to AWS ECS.
-
-Full Stack Developer | DevGrid (2018 - 2022)
-- Engineered responsive client-facing web portals using React and TailwindCSS.
-- Developed fast REST APIs using Express.js and managed database queries and optimization on PostgreSQL.
-- Reduced server response times by 35% by implementing Redis caching layers.
+PROJECTS
+- CMM (Cargo Management Module): Voyage planning and cargo tracking system. Engineered backend REST API architecture to manage and optimize voyage allocation routes.
+- ACA (Automatic Cargo Allocation): Automatic allocation system for stowage space optimization. Built using Java, Spring Boot, and Microservices.
+- QC4 Web App: Questionnaire data management and reporting system. Designed database and backend APIs to handle reports and aggregations.
+- Levica: Secure transaction system integrating electronic currency and reward tokens. Secured using Spring Security and JWT.
+- Primary & Secondary IDMS: Comprehensive identity management systems with REST APIs and admin control features.
 
 EDUCATION
-B.S. in Computer Science | State University (2014 - 2018)
-- Graduated Magna Cum Laude
-- Specialization: Distributed Systems and Software Engineering
+- Bachelor of Computer Applications – Siena College of Professional Studies (2015–2018)
+- 12th (83%) – SN HSS Sreekandeswaram (2014–2015)
+- 10th (85%) – SCS HSS Valamangalam (2012–2013)
+
+PASSIONS
+- Travel, Coding, Arts & Crafts, Music
