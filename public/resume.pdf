@@ -1,0 +1,30 @@
+=========================================
+ALEX RIVERA - SENIOR SOFTWARE ENGINEER
+Email: alex.rivera@example.com | Tel: +1 (555) 019-2834
+LinkedIn: linkedin.com/in/alexrivera | GitHub: github.com/alexrivera
+=========================================
+
+PROFESSIONAL SUMMARY
+Dynamic and result-oriented Senior Software Engineer with 8+ years of hands-on experience in designing, building, and deploying highly scalable web solutions, distributed architectures, and microservices. Expert in Javascript (React, Next.js, Node.js) and Java (Spring Boot) ecosystems.
+
+TECHNICAL SKILLS
+- Frontend: React, Next.js, HTML5, CSS3, TailwindCSS, TypeScript
+- Backend: Node.js (Express), Java (Spring Boot), Python (FastAPI)
+- Databases: PostgreSQL, MongoDB, Redis, MySQL
+- DevOps & Cloud: AWS (S3, EC2, ECS, Lambda), Docker, CI/CD, Git, Linux
+
+EXPERIENCE
+Senior Software Engineer | TechCorp Inc. (2022 - Present)
+- Architected and built a microservices-based SaaS e-commerce checkout page resulting in a 25% improvement in load times and a 14% conversion bump.
+- Led a team of 4 developer peers to rewrite a legacy Java backend into modern Spring Boot modules.
+- Formulated custom GitHub Action CI/CD pipelines, automating tests and containerized Docker deployments to AWS ECS.
+
+Full Stack Developer | DevGrid (2018 - 2022)
+- Engineered responsive client-facing web portals using React and TailwindCSS.
+- Developed fast REST APIs using Express.js and managed database queries and optimization on PostgreSQL.
+- Reduced server response times by 35% by implementing Redis caching layers.
+
+EDUCATION
+B.S. in Computer Science | State University (2014 - 2018)
+- Graduated Magna Cum Laude
+- Specialization: Distributed Systems and Software Engineering
