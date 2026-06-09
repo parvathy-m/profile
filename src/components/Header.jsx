@@ -22,7 +22,7 @@ const Header = ({ profile }) => {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300">
+      <nav className="sticky top-0 z-40 w-full backdrop-blur-md bg-slate-100/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -94,7 +94,7 @@ const Header = ({ profile }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden px-4 pt-2 pb-4 bg-white dark:bg-slate-950 border-t border-slate-200/50 dark:border-slate-800/50"
+            className="md:hidden px-4 pt-2 pb-4 bg-slate-100 dark:bg-slate-950 border-t border-slate-200/50 dark:border-slate-800/50"
           >
             <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
@@ -113,7 +113,7 @@ const Header = ({ profile }) => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
+      <header className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-slate-200 to-slate-100 dark:from-slate-950 dark:to-slate-900">
         {/* Glow effect background blobs */}
         <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary-400/20 dark:bg-primary-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-80 h-80 bg-indigo-400/20 dark:bg-indigo-500/10 rounded-full filter blur-3xl pointer-events-none"></div>

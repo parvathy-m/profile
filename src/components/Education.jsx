@@ -6,7 +6,7 @@ const Education = ({ education }) => {
   if (!education || education.length === 0) return null;
 
   return (
-    <section id="education" className="py-20 lg:py-32 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section id="education" className="py-20 lg:py-32 bg-slate-100 dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">

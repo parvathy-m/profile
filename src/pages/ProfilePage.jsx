@@ -10,7 +10,7 @@ import { resumeData } from '../data/resumeData';
 
 const ProfilePage = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+    <div className="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
       
       {/* Header and Hero */}
       <Header profile={resumeData.profile} />

@@ -87,7 +87,7 @@ const WorkExperience = ({ experience }) => {
   if (!experience || experience.length === 0) return null;
 
   return (
-    <section id="experience" className="py-20 lg:py-32 bg-slate-50 dark:bg-slate-950/50 relative">
+    <section id="experience" className="py-20 lg:py-32 bg-slate-200 dark:bg-slate-950/50 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.h2 
