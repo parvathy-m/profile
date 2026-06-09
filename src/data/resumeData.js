@@ -109,17 +109,62 @@ export const resumeData = {
   ],
   experience: [
     {
-      role: 'Backend Software Engineer',
-      company: 'Tech Solutions / Software Corp',
-      location: 'India',
-      period: '4+ Years Experience',
+      role: 'Java Developer',
+      company: 'Inspired Gaming',
+      location: 'Infopark, Kochi',
+      period: '2026 – Present',
       description: [
-        'Developed scalable microservices backend applications using Java and Spring Boot ecosystems.',
-        'Designed and optimized relational databases queries using Hibernate, MySQL, and PostgreSQL, increasing execution performance.',
-        'Wrote robust unit and integration testing files using JUnit 5 and Mockito, ensuring 90%+ code coverage on main API channels.',
-        'Enforced JWT-based stateless session authentications and secured user roles in monolithic and distributed architectures.'
+        'Designed and delivered scalable backend services for logistics workflow automation.',
+        'Implemented secure RESTful APIs using Java 21, Spring Boot, and Spring Security with JWT-based authentication.',
+        'Refactored legacy microservices for improved maintainability and performance.',
+        'Optimized SQL queries and API responsiveness.',
+        'Resolved production incidents and conducted UAT defect analysis.',
+        'Collaborated on code reviews and maintained coding standards.',
+        'Reduced API response latency through query optimization.'
       ],
-      tech: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs', 'PostgreSQL', 'Jira']
+      tech: ['Java 21', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs']
+    },
+    {
+      role: 'Software Engineer (Backend)',
+      company: 'ThinkPlan Technologies',
+      location: 'Infopark, Kochi',
+      period: '2023 – 2026',
+      description: [
+        'Designed and delivered scalable backend services for logistics workflow automation.',
+        'Implemented secure RESTful APIs using Java 21, Spring Boot, and Spring Security with JWT-based authentication.',
+        'Refactored legacy microservices for improved maintainability and performance.',
+        'Optimized SQL queries and API responsiveness.',
+        'Resolved production incidents and conducted UAT defect analysis.',
+        'Collaborated on code reviews and maintained coding standards.',
+        'Reduced API response latency through query optimization.'
+      ],
+      tech: ['Java 21', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs']
+    },
+    {
+      role: 'Software Engineer',
+      company: 'Innoventure Software Labs',
+      location: 'Infopark, Kochi',
+      period: '2021 – 2023',
+      description: [
+        'Developed and maintained backend applications using Spring Boot and Spring Security.',
+        'Architected REST APIs for identity management and reporting systems.',
+        'Implemented token-based authentication and access control mechanisms.',
+        'Optimized database performance and indexing strategies.',
+        'Worked with frontend teams to deliver end-to-end solutions.'
+      ],
+      tech: ['Java', 'Spring Boot', 'Spring Security', 'REST APIs', 'SQL']
+    },
+    {
+      role: 'Junior Developer',
+      company: 'Soften Technologies',
+      location: 'Kadantra, Kochi',
+      period: '2018 – 2019',
+      description: [
+        'Developed web applications using ASP.NET MVC and SQL Server.',
+        'Implemented backend logic, CRUD operations, and database design.',
+        'Assisted in debugging, testing, and deployment activities.'
+      ],
+      tech: ['ASP.NET MVC', 'SQL Server', 'C#']
     }
   ]
 };
