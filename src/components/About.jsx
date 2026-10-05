@@ -9,7 +9,7 @@ const About = ({ profile, passions }) => {
     {
       icon: <Award className="w-6 h-6 text-primary-500" />,
       title: 'Experience',
-      detail: '4+ Years Backend Dev',
+      detail: '5+ Years Backend Dev',
     },
     {
       icon: <Briefcase className="w-6 h-6 text-indigo-500" />,

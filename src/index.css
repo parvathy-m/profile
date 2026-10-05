@@ -31,6 +31,11 @@
     --primary-800: #065f46;
     --primary-900: #064e3b;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+  .logo {
+    font-family: 'Lobster', cursive;
+  }
 
   .dark {
     /* Dark mode: Violet (original theme) */

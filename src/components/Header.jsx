@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Sun, Moon, Mail, Menu, X, ArrowDown } from 'lucide-react';
 import { Github, Linkedin } from './BrandIcons';
 import { useTheme } from '../context/ThemeContext';
-import avatarImg from '../assets/avatar.png';
+import avatarImg from '../assets/avatar.jpg';
 
 const Header = ({ profile }) => {
   const { theme, toggleTheme } = useTheme();
@@ -32,8 +32,11 @@ const Header = ({ profile }) => {
               transition={{ duration: 0.5 }}
               className="flex-shrink-0"
             >
-              <a href="#" className="text-xl font-bold tracking-tight bg-gradient-to-r from-primary-600 to-indigo-500 bg-clip-text text-transparent dark:from-primary-400 dark:to-indigo-400">
-                {profile.name.replace(/\s+/g, '')}.dev
+              <a
+                href="#"
+                className=" tracking-widest bg-gradient-to-r from-emerald-600 via-primary-600 to-indigo-500 bg-clip-text text-transparent dark:from-emerald-400 dark:via-primary-400 dark:to-indigo-400 hover:scale-105 transition-transform inline-block"
+              >
+                PM
               </a>
             </motion.div>
 

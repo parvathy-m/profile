@@ -9,7 +9,7 @@ export const resumeData = {
     linkedinDisplay: 'linkedin.com/in/parvathy-Mohan',
     github: 'https://github.com/parvathy-m',
     githubDisplay: 'parvathy-m.github.io',
-    summary: 'Software Engineer with 4+ years of experience in backend development using Java, Spring Boot, and Microservices architecture. Skilled in designing scalable REST APIs, implementing secure authentication (JWT/OAuth2), and optimizing database performance. Experienced in Agile environments with strong focus on clean code, unit testing, and production stability.'
+    summary: 'Software Engineer with 5+ years of experience in backend development using Java, Spring Boot, and Microservices architecture. Skilled in designing scalable REST APIs, implementing secure authentication (JWT/OAuth2), and optimizing database performance. Experienced in Agile environments with strong focus on clean code, unit testing, and production stability.'
   },
   skills: [
     // Languages
@@ -31,6 +31,9 @@ export const resumeData = {
     { name: 'MongoDB', level: 82, category: 'Databases', icon: '🍃' },
     { name: 'MS SQL', level: 85, category: 'Databases', icon: '💾' },
     // DevOps
+    { name: 'Docker', level: 50, category: 'DevOps', icon: '🐳' },
+    { name: 'Kubernetes', level: 40, category: 'DevOps', icon: '☸️' },
+    { name: 'GCP', level: 40, category: 'DevOps', icon: '☁️' },
     { name: 'Git', level: 90, category: 'DevOps', icon: '🌴' },
     { name: 'GitHub', level: 90, category: 'DevOps', icon: '🐙' },
     { name: 'GitLab', level: 88, category: 'DevOps', icon: '🦊' },
@@ -83,6 +86,12 @@ export const resumeData = {
   ],
   education: [
     {
+      degree: 'Master of Computer Applications (MCA)',
+      institution: 'Amrita University',
+      period: '2023 – 2026',
+      score: 'Graduated'
+    },
+    {
       degree: 'Bachelor of Computer Applications (BCA)',
       institution: 'Siena College of Professional Studies',
       period: '2015 – 2018',
@@ -109,20 +118,17 @@ export const resumeData = {
   ],
   experience: [
     {
-      role: 'Java Developer',
-      company: 'Inspired Gaming',
-      location: 'Infopark, Kochi',
-      period: '2026 – Present',
+      role: 'Software Engineer',
+      company: 'Inspired Software Development (India) LLP',
+      location: 'Kochi, Kerala, India',
+      period: 'June 2026 – Present',
       description: [
-        'Designed and delivered scalable backend services for logistics workflow automation.',
-        'Implemented secure RESTful APIs using Java 21, Spring Boot, and Spring Security with JWT-based authentication.',
-        'Refactored legacy microservices for improved maintainability and performance.',
-        'Optimized SQL queries and API responsiveness.',
-        'Resolved production incidents and conducted UAT defect analysis.',
-        'Collaborated on code reviews and maintained coding standards.',
-        'Reduced API response latency through query optimization.'
+        'Designing and developing scalable backend microservices and RESTful APIs using Java and Spring Boot.',
+        'Implementing secure authentication and authorization mechanisms across distributed services.',
+        'Optimizing SQL database performance, query execution plans, and API response efficiency.',
+        'Collaborating in an Agile software development environment with focus on clean code and automated testing.'
       ],
-      tech: ['Java 21', 'Spring Boot', 'Spring Security', 'JWT', 'REST APIs']
+      tech: ['Java', 'Spring Boot', 'Microservices', 'REST APIs', 'SQL']
     },
     {
       role: 'Software Engineer (Backend)',
